@@ -19,9 +19,10 @@ hasPet = true
 hasPet = false
 
 //literals and subscripting
-var coutingUp = ["One","Two"]
+var countingUp = ["One","Two"]
 var country = dictionaryOfCapitalByCountry["beijing"]
 var country2 = dictionaryOfCapitalByCountry["seol"]
+var nameByParkingSpace = [13:"Alice",27:"Bob"]
 
 
 //initializers
@@ -45,7 +46,7 @@ arrayOfInts.count
 emptyArray.isEmpty
 
 //Instance Methods
-coutingUp.append("Three")
+countingUp.append("Three")
 
 //optionals
 var reading1:Float?
@@ -63,8 +64,47 @@ if let r1 = reading1, r2 = reading2, r3 = reading3 {
     let errorString = "instrument reported a reading that was nil"
 }
 
-//
+//Loops and string interpolation
+for (i, string) in countingUp.enumerate(){
+    let string = countingUp[i]
+}
 
+for (space, name) in nameByParkingSpace{
+    let string = "space \(space): \(name)"
+}
+
+
+//Enumerations 
+
+enum pieType {
+    case Apple
+    case Cherry
+    case Pecan
+
+}
+let favor = pieType.Apple
+
+let name : String
+switch favor {
+case .Apple: name = "apple"
+case .Cherry: name = "cherry"
+case .Pecan: name = "pecan"
+}
+
+
+
+
+enum P: Int{
+    case Apple = 0
+    case Cherry
+    case Pecan
+}
+
+let PRawVaule = P.Pecan.rawValue
+
+if let pietype = P(rawValue: PRawVaule) {
+    
+}
 
 
 
