@@ -41,13 +41,35 @@ class ConversionViewController: UIViewController {
     
     func updateCelsiusLabel(){
         if let value = celsiusValue {
-            celsiusLabel.text = "\(value)"
+           celsiusLabel.text = numberFormatter.stringFromNumber(value)
         }else {
             celsiusLabel.text = "???"
         }
         
     }
     
+    let numberFormatter: NSNumberFormatter = {
+        let nf = NSNumberFormatter()
+        nf.numberStyle = .DecimalStyle
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
+    
+    func textField(textField: UITextField,
+        shouldChangeCharactersInRange range: NSRange,
+        replacementString string: String) -> Bool {
+            
+            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+            
+            if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+                return false
+            } else {
+                return true
+            }
+        
+    }
     
     
     
