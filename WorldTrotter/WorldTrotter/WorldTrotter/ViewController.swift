@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func viewDidLoad()
+  /*  override func viewDidLoad()
     {
         super.viewDidLoad()
         
@@ -25,5 +25,6 @@ class ViewController: UIViewController {
         //view.addSubview(secondView)
         firstView.addSubview(secondView)
     }
+*/
 }
 
