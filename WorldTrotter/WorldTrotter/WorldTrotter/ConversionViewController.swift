@@ -71,11 +71,15 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
         
         //Creating a new Character Set since decimalDigitCharacterSet does not allow "."; Inverting set to include everything but characters.
         let numerical = string.rangeOfCharacterFromSet(NSCharacterSet(charactersInString: "0123456789.").invertedSet)
-        //let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
-        //let replacementTextHasDecimalSeperator = string.rangeOfString(".")
+        let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
+        let replacementTextHasDecimalSeperator = string.rangeOfString(".")
 
         
-        if numerical != nil //&& existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil
+        if numerical != nil
+        {
+            return false
+        }
+        else if existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil
         {
             return false
         }
