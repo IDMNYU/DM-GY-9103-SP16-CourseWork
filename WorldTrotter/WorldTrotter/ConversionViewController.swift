@@ -68,9 +68,6 @@ class ConversionViewController: UIViewController {
             } else {
                 return true
             }
-        
     }
-    
-    
     
 }

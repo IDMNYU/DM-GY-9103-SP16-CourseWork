@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Conversion View Controller-->
@@ -29,7 +30,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yrb-2u-k4o"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF8-oa-1wi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF8-oa-1wi">
                                 <rect key="frame" x="18" y="142" width="339" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,7 +64,9 @@
                             <constraint firstItem="doD-6Z-Vge" firstAttribute="top" secondItem="OF8-oa-1wi" secondAttribute="bottom" constant="8" id="DrH-G7-2O7"/>
                             <constraint firstItem="n0e-qO-zMa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fgx-8d-SKL"/>
                             <constraint firstItem="OF8-oa-1wi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HeV-oE-qtE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OF8-oa-1wi" secondAttribute="trailing" constant="-2" id="Lbj-WA-ls1"/>
                             <constraint firstItem="dUg-Sx-NJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PNj-Cz-Hhg"/>
+                            <constraint firstItem="OF8-oa-1wi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="PmA-GN-eEb"/>
                             <constraint firstItem="dUg-Sx-NJl" firstAttribute="top" secondItem="KtY-Xd-bXl" secondAttribute="bottom" constant="8" id="Qzj-lV-cjI"/>
                             <constraint firstItem="KtY-Xd-bXl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hrN-cE-Tci"/>
                             <constraint firstItem="n0e-qO-zMa" firstAttribute="centerX" secondItem="OF8-oa-1wi" secondAttribute="centerX" id="kSM-hY-8U8"/>
