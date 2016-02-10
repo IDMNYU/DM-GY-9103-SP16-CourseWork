@@ -37,6 +37,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-rw-X84">
+                                <rect key="frame" x="266" y="129" width="69" height="30"/>
+                                <state key="normal" title="Add Color"/>
+                                <connections>
+                                    <action selector="addNewName:" destination="BYZ-38-t0r" eventType="touchDown" id="tki-Wj-KZg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -49,6 +56,7 @@
                             <constraint firstItem="mrw-bD-WGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EOv-K5-x5k"/>
                             <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="F3o-Mq-jkt"/>
                             <constraint firstItem="To1-kT-4hN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fex-2J-kCV"/>
+                            <constraint firstItem="c8q-rw-X84" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2T-oo-spo"/>
                             <constraint firstItem="To1-kT-4hN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="T4C-aS-abW"/>
                             <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bEi-oZ-8Ku"/>
                             <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="iUQ-Ol-YBm"/>
@@ -61,6 +69,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="addName" destination="c8q-rw-X84" id="BzT-Bm-lZM"/>
                         <outlet property="colorLabel" destination="mrw-bD-WGd" id="7cj-Ib-tFc"/>
                         <outlet property="nameField" destination="To1-kT-4hN" id="ogf-Fc-WgO"/>
                     </connections>
