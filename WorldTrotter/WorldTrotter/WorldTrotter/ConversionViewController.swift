@@ -70,22 +70,19 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
         //let numerical = NSCharacterSet.decimalDigitCharacterSet().invertedSet
         
         //Creating a new Character Set since decimalDigitCharacterSet does not allow "."; Inverting set to include everything but characters.
-        let numerical = NSCharacterSet(charactersInString: "0123456789.").invertedSet
-        let excludeCharacters = string.componentsSeparatedByCharactersInSet(numerical)
-        let AlphabeticalInput = excludeCharacters.joinWithSeparator("")
+        let numerical = string.rangeOfCharacterFromSet(NSCharacterSet(charactersInString: "0123456789.").invertedSet)
+        //let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
+        //let replacementTextHasDecimalSeperator = string.rangeOfString(".")
 
-        return string == AlphabeticalInput
         
-        /*let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
-        let replacementTextHasDecimalSeperator = string.rangeOfString(".")
-        
-        if existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil
+        if numerical != nil //&& existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil
         {
+            return false
         }
         else
         {
             return true
-        }*/
+        }
     }
     
     @IBAction func dismissKeyboard(sender: AnyObject)
