@@ -14,8 +14,34 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateBackgroud()
+        
         print("ConversionViewController loaded its view")
     }
+    
+    func updateBackgroud()
+    {
+        let timeComponents = NSCalendar.currentCalendar().components(.Hour, fromDate: NSDate())
+        
+        let hour = timeComponents.hour
+        
+        switch hour
+            
+        {
+        case 0...6:
+            view.backgroundColor = UIColor.darkGrayColor()
+        case 6...12:
+            view.backgroundColor = UIColor.yellowColor()
+        case 12...19:
+            view.backgroundColor = UIColor.orangeColor()
+        case 19...23:
+            view.backgroundColor = UIColor.blueColor()
+        default:
+            view.backgroundColor = UIColor.lightGrayColor()
+        }
+
+    }
+    
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     

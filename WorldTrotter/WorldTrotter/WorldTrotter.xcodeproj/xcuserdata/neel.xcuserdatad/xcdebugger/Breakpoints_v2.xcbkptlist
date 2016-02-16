@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorldTrotter/AppDelegate.swift"
+            timestampString = "477303004.384056"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldTrotter.AppDelegate.init (WorldTrotter.AppDelegate.Type)() -&gt; WorldTrotter.AppDelegate"
+                  moduleName = "WorldTrotter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neel/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/WorldTrotter/WorldTrotter/WorldTrotter/AppDelegate.swift"
+                  timestampString = "477303777.623099"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "WorldTrotter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neel/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/WorldTrotter/WorldTrotter/WorldTrotter/AppDelegate.swift"
+                  timestampString = "477303777.62341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
