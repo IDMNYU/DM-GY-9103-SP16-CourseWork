@@ -14,9 +14,16 @@ class ConversionViewController: UIViewController, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateBackgroud()
+        //updateBackgroud()
         
         print("ConversionViewController loaded its view")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        updateBackgroud()
     }
     
     func updateBackgroud()

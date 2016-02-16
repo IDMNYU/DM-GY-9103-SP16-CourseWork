@@ -17,6 +17,8 @@
 		18A3FE6D1C73979D00E3B5CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3FE6B1C73979D00E3B5CE /* WebKit.framework */; };
 		18A3FE6E1C73979D00E3B5CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3FE6C1C73979D00E3B5CE /* WebKit.framework */; };
 		18A3FE701C73990F00E3B5CE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3FE6F1C73990F00E3B5CE /* WebViewController.swift */; };
+		18A3FE731C73BDC000E3B5CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3FE711C73BDC000E3B5CE /* CoreLocation.framework */; };
+		18A3FE741C73BDC000E3B5CE /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3FE721C73BDC000E3B5CE /* LocalAuthentication.framework */; };
 		18D7DD491C6A6A8E00997209 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7DD481C6A6A8E00997209 /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		18A3FE6B1C73979D00E3B5CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		18A3FE6C1C73979D00E3B5CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
 		18A3FE6F1C73990F00E3B5CE /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		18A3FE711C73BDC000E3B5CE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		18A3FE721C73BDC000E3B5CE /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		18D7DD481C6A6A8E00997209 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A3FE731C73BDC000E3B5CE /* CoreLocation.framework in Frameworks */,
+				18A3FE741C73BDC000E3B5CE /* LocalAuthentication.framework in Frameworks */,
 				18A3FE6D1C73979D00E3B5CE /* WebKit.framework in Frameworks */,
 				18A3FE6E1C73979D00E3B5CE /* WebKit.framework in Frameworks */,
 				18A3FE681C71755E00E3B5CE /* MapKit.framework in Frameworks */,
@@ -53,6 +59,8 @@
 		182791481C6924F00077E553 = {
 			isa = PBXGroup;
 			children = (
+				18A3FE711C73BDC000E3B5CE /* CoreLocation.framework */,
+				18A3FE721C73BDC000E3B5CE /* LocalAuthentication.framework */,
 				18A3FE6B1C73979D00E3B5CE /* WebKit.framework */,
 				18A3FE6C1C73979D00E3B5CE /* WebKit.framework */,
 				18A3FE671C71755E00E3B5CE /* MapKit.framework */,
