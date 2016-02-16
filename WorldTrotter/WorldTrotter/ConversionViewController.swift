@@ -7,7 +7,47 @@
 //
 
 import UIKit
+
+
+
+
+
 class ConversionViewController: UIViewController {
+   
+//    override func viewDidLoad(){
+//        //always call the super implementation of viewDidLoad
+//        super.viewDidLoad()
+//        print("ConversionViewController loaded its view")
+//        
+//    }
+    
+//    var r: CGFloat
+//    var g: CGFloat
+//    var b: CGFloat
+//
+//    
+//    func getRandomColor() -> UIColor{
+//        
+//        r = CGFloat(drand48())
+//        
+//        g = CGFloat(drand48())
+//        
+//        b = CGFloat(drand48())
+//        
+//        return UIColor(red:r, green:g, blue:b, alpha: 1.0)
+//        print(r + "  " + g + "  " + b)
+//        
+//    }
+//    
+//    
+//    
+//    override func viewWillAppear(animated: Bool) {
+//                super.viewWillAppear(animated)
+//                self.view.backgroundColor = UIColor(red:r, green:g, blue:b, alpha:1)
+//            }
+//    
+    
+    
  
     @IBOutlet var celsiusLabel: UILabel!
     var fahrenheitValue: Double? {
