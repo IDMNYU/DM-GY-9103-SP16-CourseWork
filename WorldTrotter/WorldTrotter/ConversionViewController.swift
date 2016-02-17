@@ -10,22 +10,33 @@ import UIKit
 
 
 class ConversionViewController: UIViewController {
+
+    var bgColor = UIColor.lightGrayColor()
    
     override func viewDidLoad(){
         //always call the super implementation of viewDidLoad
         super.viewDidLoad()
         print("ConversionViewController loaded its view")
         
+        let currentDate = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH"
+        let convertedDate = dateFormatter.stringFromDate(currentDate)
+        let hour = NSNumberFormatter().numberFromString(convertedDate)
+        let hourValue = Int(hour!)
+        if hourValue >= 0 && hourValue <= 8 {
+            bgColor = UIColor.darkGrayColor()
+        }
     }
     
-    var r: CGFloat = CGFloat(drand48())
-    var g: CGFloat = CGFloat(drand48())
-    var b: CGFloat = CGFloat(drand48())
+//    var r: CGFloat = CGFloat(drand48())
+//    var g: CGFloat = CGFloat(drand48())
+//    var b: CGFloat = CGFloat(drand48())
 
     
     override func viewWillAppear(animated: Bool) {
                 super.viewWillAppear(animated)
-                self.view.backgroundColor = UIColor(red:r, green:g, blue:b, alpha:1)
+                self.view.backgroundColor = bgColor
             }
     
     
