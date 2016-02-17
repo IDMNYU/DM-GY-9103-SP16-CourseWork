@@ -9,43 +9,24 @@
 import UIKit
 
 
-
-
-
 class ConversionViewController: UIViewController {
    
-//    override func viewDidLoad(){
-//        //always call the super implementation of viewDidLoad
-//        super.viewDidLoad()
-//        print("ConversionViewController loaded its view")
-//        
-//    }
+    override func viewDidLoad(){
+        //always call the super implementation of viewDidLoad
+        super.viewDidLoad()
+        print("ConversionViewController loaded its view")
+        
+    }
     
-//    var r: CGFloat
-//    var g: CGFloat
-//    var b: CGFloat
-//
-//    
-//    func getRandomColor() -> UIColor{
-//        
-//        r = CGFloat(drand48())
-//        
-//        g = CGFloat(drand48())
-//        
-//        b = CGFloat(drand48())
-//        
-//        return UIColor(red:r, green:g, blue:b, alpha: 1.0)
-//        print(r + "  " + g + "  " + b)
-//        
-//    }
-//    
-//    
-//    
-//    override func viewWillAppear(animated: Bool) {
-//                super.viewWillAppear(animated)
-//                self.view.backgroundColor = UIColor(red:r, green:g, blue:b, alpha:1)
-//            }
-//    
+    var r: CGFloat = CGFloat(drand48())
+    var g: CGFloat = CGFloat(drand48())
+    var b: CGFloat = CGFloat(drand48())
+
+    
+    override func viewWillAppear(animated: Bool) {
+                super.viewWillAppear(animated)
+                self.view.backgroundColor = UIColor(red:r, green:g, blue:b, alpha:1)
+            }
     
     
  
@@ -96,18 +77,32 @@ class ConversionViewController: UIViewController {
         return nf
     }()
     
+//    func textField(textField: UITextField,
+//        shouldChangeCharactersInRange range: NSRange,
+//        replacementString string: String) -> Bool {
+//            
+//            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+//            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+//            
+//            if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+//                return false
+//            } else {
+//                return true
+//            }
+//    }
+    
     func textField(textField: UITextField,
         shouldChangeCharactersInRange range: NSRange,
         replacementString string: String) -> Bool {
             
-            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
-            
-            if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+        if textField.tag == 2 {  //your textField
+            let invalid = NSCharacterSet(charactersInString: "aeiou")  //characters to block
+            if let x = string.rangeOfCharacterFromSet(invalid) {
                 return false
-            } else {
-                return true
             }
+        }
+        return true
     }
+
     
 }
