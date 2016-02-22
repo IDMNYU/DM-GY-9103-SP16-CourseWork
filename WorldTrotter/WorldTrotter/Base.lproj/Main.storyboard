@@ -115,15 +115,37 @@
                     <connections>
                         <segue destination="9ug-O2-J3k" kind="relationship" relationship="viewControllers" id="NYg-qj-aJp"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7hw-BB-E3Q"/>
+                        <segue destination="V8T-sp-Ni5" kind="relationship" relationship="viewControllers" id="TeZ-mA-Yma"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRd-Ln-TED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="-44"/>
         </scene>
+        <!--web-->
+        <scene sceneID="xSv-7S-WgZ">
+            <objects>
+                <viewController id="V8T-sp-Ni5" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yD3-ct-Lcs"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRF-Kq-hiw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rQn-Gg-xIZ" customClass="UIWebView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="web" image="Webicon" id="fFc-NR-sjR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41r-GO-DUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810.5" y="740.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ConvertIcon" width="49" height="33"/>
         <image name="MapIcon" width="49" height="33"/>
+        <image name="Webicon" width="33" height="33"/>
     </resources>
 </document>

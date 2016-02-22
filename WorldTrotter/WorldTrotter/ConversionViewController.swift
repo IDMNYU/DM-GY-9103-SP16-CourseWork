@@ -11,7 +11,7 @@ import UIKit
 
 class ConversionViewController: UIViewController {
 
-    var bgColor = UIColor.lightGrayColor()
+    var bgColor = UIColor(red:245, green:244, blue:241, alpha:1)
    
     override func viewDidLoad(){
         //always call the super implementation of viewDidLoad
@@ -24,7 +24,7 @@ class ConversionViewController: UIViewController {
         let convertedDate = dateFormatter.stringFromDate(currentDate)
         let hour = NSNumberFormatter().numberFromString(convertedDate)
         let hourValue = Int(hour!)
-        if hourValue >= 0 && hourValue <= 8 {
+        if hourValue >= 0 && hourValue <= 12 {
             bgColor = UIColor.darkGrayColor()
         }
     }
