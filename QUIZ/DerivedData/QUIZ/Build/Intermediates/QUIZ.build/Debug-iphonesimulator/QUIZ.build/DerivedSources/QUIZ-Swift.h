@@ -108,19 +108,26 @@ SWIFT_CLASS("_TtC4QUIZ11AppDelegate")
 @end
 
 @class UILabel;
+@class NSLayoutConstraint;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC4QUIZ14ViewController")
 @interface ViewController : UIViewController
-@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified questionLabel;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified currentQuestionLabel;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint * __null_unspecified currentQuestionLabelCenterXConstraint;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified nextQuestionLabel;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint * __null_unspecified nextQuestionLabelCenterXConstraint;
 @property (nonatomic, strong) IBOutlet UILabel * __null_unspecified answerLabel;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * __nonnull questions;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * __nonnull answers;
 @property (nonatomic) NSInteger currentQuestionIndex;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)updateOffScreenLabel;
 - (IBAction)showNextQuestion:(id __nonnull)sender;
 - (IBAction)showAnswer:(id __nonnull)sender;
+- (void)animateLabelTransitions;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
