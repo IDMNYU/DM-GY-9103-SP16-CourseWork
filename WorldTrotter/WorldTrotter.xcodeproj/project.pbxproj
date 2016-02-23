@@ -25,6 +25,8 @@
 		9199AC181C7C2153005EC09C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9199AC1A1C7C215D005EC09C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9199AC1B1C7C215D005EC09C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9199AC1C1C7C2288005EC09C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9199AC1D1C7C2288005EC09C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		91AFC7071C73984D00E8EE26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		91AFC7091C73A08D00E8EE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91AFC70B1C73A31B00E8EE26 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				en,
 				Base,
 				es,
+				"zh-Hans",
 			);
 			mainGroup = 91DD5EA71C6A4BE2006E3415;
 			productRefGroup = 91DD5EB11C6A4BE2006E3415 /* Products */;
@@ -170,6 +173,7 @@
 				9199AC181C7C2153005EC09C /* Base */,
 				9199AC1A1C7C215D005EC09C /* en */,
 				9199AC1B1C7C215D005EC09C /* es */,
+				9199AC1D1C7C2288005EC09C /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -180,6 +184,7 @@
 				91DD5EB81C6A4BE2006E3415 /* Base */,
 				9199AC131C7C12FF005EC09C /* en */,
 				9199AC141C7C1554005EC09C /* es */,
+				9199AC1C1C7C2288005EC09C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
