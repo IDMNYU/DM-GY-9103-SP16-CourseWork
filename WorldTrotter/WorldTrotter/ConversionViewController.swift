@@ -24,14 +24,10 @@ class ConversionViewController: UIViewController {
         let convertedDate = dateFormatter.stringFromDate(currentDate)
         let hour = NSNumberFormatter().numberFromString(convertedDate)
         let hourValue = Int(hour!)
-        if hourValue >= 0 && hourValue <= 12 {
+        if hourValue >= 0 && hourValue <= 8 {
             bgColor = UIColor.darkGrayColor()
         }
     }
-    
-//    var r: CGFloat = CGFloat(drand48())
-//    var g: CGFloat = CGFloat(drand48())
-//    var b: CGFloat = CGFloat(drand48())
 
     
     override func viewWillAppear(animated: Bool) {
@@ -59,12 +55,19 @@ class ConversionViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     
     @IBAction func fahrenheitFieldEditingChanged(textField: UITextField){
-        if let text = textField.text, value = Double(text) {
-            fahrenheitValue = value
-        }else {
+//        if let text = textField.text, value = Double(text) {
+//            fahrenheitValue = value
+//        }else {
+//            fahrenheitValue = nil
+//        }
+        if let text = textField.text, number = numberFormatter.numberFromString(text){
+            fahrenheitValue = number.doubleValue
+        }
+        else {
             fahrenheitValue = nil
         }
-    
+        
+        
     }
     
     @IBAction func dismissKeyboard(sender: AnyObject){
@@ -88,32 +91,37 @@ class ConversionViewController: UIViewController {
         return nf
     }()
     
-//    func textField(textField: UITextField,
-//        shouldChangeCharactersInRange range: NSRange,
-//        replacementString string: String) -> Bool {
-//            
-//            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-//            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
-//            
-//            if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
-//                return false
-//            } else {
-//                return true
-//            }
-//    }
-    
     func textField(textField: UITextField,
         shouldChangeCharactersInRange range: NSRange,
         replacementString string: String) -> Bool {
             
-        if textField.tag == 2 {  //your textField
-            let invalid = NSCharacterSet(charactersInString: "aeiou")  //characters to block
-            if let x = string.rangeOfCharacterFromSet(invalid) {
+//            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+//            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+
+            let currentLocale = NSLocale.currentLocale()
+            let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
+            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(decimalSeparator)
+            let replacementTextHasDecimalSeparator = string.rangeOfString(decimalSeparator)
+            
+            if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
                 return false
+            } else {
+                return true
             }
-        }
-        return true
     }
+    
+//    func textField(textField: UITextField,
+//        shouldChangeCharactersInRange range: NSRange,
+//        replacementString string: String) -> Bool {
+//            
+//        if textField.tag == 2 {  //your textField
+//            let invalid = NSCharacterSet(charactersInString: "aeiou")  //characters to block
+//            if let x = string.rangeOfCharacterFromSet(invalid) {
+//                return false
+//            }
+//        }
+//        return true
+//    }
 
     
 }
