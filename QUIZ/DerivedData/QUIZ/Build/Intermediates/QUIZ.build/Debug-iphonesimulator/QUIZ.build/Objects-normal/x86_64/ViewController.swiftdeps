@@ -6,38 +6,38 @@ provides-nominal:
 provides-member:
 - ["C4QUIZ14ViewController", ""]
 provides-dynamic-lookup:
-- "answerLabel"
-- "answers"
-- "showNextQuestion"
-- "viewDidLoad"
-- "updateOffScreenLabel"
 - "showAnswer"
 - "currentQuestionLabelCenterXConstraint"
+- "viewDidLoad"
 - "nextQuestionLabelCenterXConstraint"
-- "viewWillAppear"
-- "currentQuestionLabel"
-- "currentQuestionIndex"
 - "animateLabelTransitions"
-- "nextQuestionLabel"
+- "answerLabel"
+- "answers"
 - "questions"
+- "nextQuestionLabel"
+- "viewWillAppear"
+- "currentQuestionIndex"
+- "showNextQuestion"
+- "updateOffScreenLabel"
+- "currentQuestionLabel"
 depends-top-level:
+- "StringLiteralType"
+- !private "++"
+- "UILabel"
 - !private "print"
+- !private "-"
+- "ViewController"
 - "NSLayoutConstraint"
 - !private "+="
-- "ViewController"
 - "Int"
-- "UILabel"
-- !private "Array"
-- "AnyObject"
-- !private "=="
-- "String"
 - "Bool"
-- "StringLiteralType"
-- !private "-"
-- !private "++"
+- !private "=="
 - !private "UIView"
-- !private "swap"
 - "UIViewController"
+- !private "swap"
+- "AnyObject"
+- "String"
+- !private "Array"
 depends-member:
 - !private ["PSs9AnyObject", "UIView"]
 - !private ["PSs9AnyObject", "alpha"]
@@ -71,7 +71,6 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
-- !private ["PSs23ArrayLiteralConvertible", "CurveLinear"]
 - !private ["PSs23ArrayLiteralConvertible", "Element"]
 - !private ["PSs23ArrayLiteralConvertible", "Generator"]
 - !private ["PSs23ArrayLiteralConvertible", "Index"]
@@ -164,7 +163,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "viewWillAppear"]
 - ["PSs23CustomStringConvertible", ""]
-- !private ["PSs9Equatable", "CurveLinear"]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "Element"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
@@ -363,7 +361,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSs13OptionSetType", "CurveLinear"]
 - !private ["PSs13OptionSetType", "Element"]
 - !private ["Sq", "deinit"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
@@ -373,7 +370,6 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
-- !private ["PSs16RawRepresentable", "CurveLinear"]
 - !private ["PSs16RawRepresentable", "Element"]
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
@@ -382,7 +378,6 @@ depends-member:
 - !private ["PSs12SequenceType", "_Element"]
 - !private ["PSs12SequenceType", "count"]
 - !private ["PSs12SequenceType", "subscript"]
-- !private ["PSs14SetAlgebraType", "CurveLinear"]
 - !private ["PSs14SetAlgebraType", "Element"]
 - !private ["PSs17SignedIntegerType", "Distance"]
 - !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
@@ -566,7 +561,6 @@ depends-member:
 - !private ["CSo6UIView", "frame"]
 - !private ["CSo6UIView", "layoutIfNeeded"]
 - !private ["CSo6UIView", "text"]
-- !private ["VSC22UIViewAnimationOptions", "CurveLinear"]
 - !private ["VSC22UIViewAnimationOptions", "Element"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
