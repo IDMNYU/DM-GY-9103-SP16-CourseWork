@@ -15,6 +15,8 @@ class ItemsViewController: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "iosback.png"))
+        
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         
         let insets = UIEdgeInsets(top: statusBarHeight + 15, left: 0, bottom: 0, right: 0)
@@ -95,6 +97,7 @@ class ItemsViewController: UITableViewController
         cell.detailTextLabel?.text = "$\(item!.valueInDollars)"
         
         return cell*/
+        
         if indexPath.row < itemStore.allItems.count
         {
             let item = itemStore.allItems[indexPath.row]
@@ -110,6 +113,7 @@ class ItemsViewController: UITableViewController
             cell.detailTextLabel?.text = ""
         }
         
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     
