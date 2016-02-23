@@ -24,7 +24,7 @@ class ItemsViewController: UITableViewController
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        var over50 = 0
+        /*var over50 = 0
         for i in itemStore.allItems
         {
             if i.valueInDollars > 50
@@ -42,10 +42,13 @@ class ItemsViewController: UITableViewController
             itemsInSection = itemStore.allItems.count - over50
         }
         
-        return itemsInSection
+        return itemsInSection*/
+        
+        let count = itemStore.allItems.count
+        return count + 1
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  /*  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
     
@@ -59,11 +62,11 @@ class ItemsViewController: UITableViewController
         {
             return "Items Under or $50"
         }
-    }
+    } */
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-        let row = indexPath.row
+       /* let row = indexPath.row
 
         var item: Item?
         var currItemIndex = 0
@@ -91,7 +94,34 @@ class ItemsViewController: UITableViewController
         cell.textLabel?.text = item!.name
         cell.detailTextLabel?.text = "$\(item!.valueInDollars)"
         
+        return cell*/
+        if indexPath.row < itemStore.allItems.count
+        {
+            let item = itemStore.allItems[indexPath.row]
+            cell.textLabel?.text = item.name
+            let textSize = cell.textLabel?.font
+            cell.textLabel?.font  = textSize!.fontWithSize(20)
+            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        }
+            
+        else
+        {
+            cell.textLabel?.text = "No More Items!"
+            cell.detailTextLabel?.text = ""
+        }
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row < itemStore.allItems.count
+        {
+            return 60
+        }
+        else
+        {
+            return 44
+        }
     }
     
 }
