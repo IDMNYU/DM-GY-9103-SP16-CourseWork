@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     var mapView: MKMapView!
+
+    @IBOutlet weak var map: MKMapView!
     
     override func loadView() {
         
@@ -59,12 +62,33 @@ class MapViewController: UIViewController {
             break
         }
     }
-    
+   
 
     override func viewDidLoad(){
         //always call the super implementation of viewDidLoad
         super.viewDidLoad()
         print("MapviewController loaded its view")
+        var locationManager: CLLocationManager!
+        
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+            func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+                let location = locations.last as! CLLocation
+                
+                let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                
+                self.map.setRegion(region, animated: true)
+            }
+        }
+        
+
         
     }
     
@@ -76,3 +100,4 @@ class MapViewController: UIViewController {
     
     
 }
+
