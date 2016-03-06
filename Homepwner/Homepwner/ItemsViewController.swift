@@ -124,7 +124,9 @@ class ItemsViewController: UITableViewController{
         //let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
 
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
-    
+        
+        //update font
+        cell.updateLabels()
         
         //set the text on the cell with the description of the item
         //that is at the nth index of items, where n = row this cell
@@ -139,6 +141,12 @@ class ItemsViewController: UITableViewController{
         cell.nameLabel.text = item.name
         cell.serialNumberLabel.text = item.serialNumber
         cell.valueLabel.text = "&\(item.valueInDollars)"
+        print(item.valueInDollars)
+        if item.valueInDollars>50 {
+        cell.valueLabel.textColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        } else {
+        cell.valueLabel.textColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
+        }
         
         return cell
         
