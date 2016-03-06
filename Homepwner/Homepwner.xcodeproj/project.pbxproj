@@ -14,6 +14,7 @@
 		91190F5F1C85F47A0088B319 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91190F5E1C85F47A0088B319 /* ItemsViewController.swift */; };
 		91190F611C85F5DD0088B319 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91190F601C85F5DD0088B319 /* Item.swift */; };
 		91190F631C85F9ED0088B319 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91190F621C85F9ED0088B319 /* ItemStore.swift */; };
+		9124F4201C8CCD3A00AADB30 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124F41F1C8CCD3A00AADB30 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		91190F5E1C85F47A0088B319 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		91190F601C85F5DD0088B319 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		91190F621C85F9ED0088B319 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		9124F41F1C8CCD3A00AADB30 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				91190F551C85F45E0088B319 /* LaunchScreen.storyboard */,
 				91190F581C85F45E0088B319 /* Info.plist */,
 				91190F5E1C85F47A0088B319 /* ItemsViewController.swift */,
+				9124F41F1C8CCD3A00AADB30 /* ItemCell.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				91190F611C85F5DD0088B319 /* Item.swift in Sources */,
 				91190F631C85F9ED0088B319 /* ItemStore.swift in Sources */,
 				91190F4D1C85F45E0088B319 /* AppDelegate.swift in Sources */,
+				9124F4201C8CCD3A00AADB30 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,7 @@
 				91190F5D1C85F45E0088B319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
