@@ -32,7 +32,7 @@ class ItemsViewController: UITableViewController
 
     }
     
-    @IBAction func toggleEditingMode(sender: AnyObject)
+    /*@IBAction func toggleEditingMode(sender: AnyObject)
     {
         if editing
         {
@@ -45,6 +45,12 @@ class ItemsViewController: UITableViewController
             setEditing(true, animated: true)
         }
         
+    } */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
     
     override func viewDidLoad() {
@@ -52,11 +58,11 @@ class ItemsViewController: UITableViewController
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "iosback.png"))
         
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+       // let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         
-        let insets = UIEdgeInsets(top: statusBarHeight + 15, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+        //let insets = UIEdgeInsets(top: statusBarHeight + 15, left: 0, bottom: 0, right: 0)
+       // tableView.contentInset = insets
+       // tableView.scrollIndicatorInsets = insets
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
