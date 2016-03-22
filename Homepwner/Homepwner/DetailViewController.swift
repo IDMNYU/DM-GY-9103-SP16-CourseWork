@@ -7,6 +7,24 @@
 //
 
 import UIKit
+
+class BorderedUITextField : UITextField
+{
+    var setBorderStyle : UITextBorderStyle = .None
+    
+    override func becomeFirstResponder() -> Bool
+    {
+        setBorderStyle = borderStyle
+        borderStyle = .Line
+        return super.becomeFirstResponder()
+    }
+    override func resignFirstResponder() -> Bool
+    {
+        let res = super.resignFirstResponder()
+        borderStyle = setBorderStyle
+        return res
+    }
+}
 class DetailViewController: UIViewController, UITextFieldDelegate
 {
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
