@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TNz-yx-Oys">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tfu-YD-ZTx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="NS1-t2-8r6">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RA1-6X-s2D">
@@ -45,7 +45,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="cJ8-SX-bb5" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="600" height="65"/>
+                                <rect key="frame" x="0.0" y="152" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cJ8-SX-bb5" id="KOr-cx-ljd">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64.5"/>
@@ -92,10 +92,11 @@
                             <outlet property="delegate" destination="TNz-yx-Oys" id="Fu8-zt-xxI"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="7vW-ZK-30w"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaP-tQ-qu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="-102"/>
+            <point key="canvasLocation" x="1046" y="-102"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Eyp-kS-CWk">
@@ -109,8 +110,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="927-Xi-rqU">
-                                <rect key="frame" x="53" y="28" width="494" height="564"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="927-Xi-rqU">
+                                <rect key="frame" x="53" y="72" width="494" height="584"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-Yb-0Zl">
                                         <rect key="frame" x="0.0" y="0.0" width="494" height="30"/>
@@ -175,8 +176,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OB-vj-Wou">
-                                        <rect key="frame" x="0.0" y="114" width="494" height="450"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OB-vj-Wou">
+                                        <rect key="frame" x="0.0" y="114" width="494" height="470"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -190,19 +191,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="1ad-MH-HA8"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="2aa-lE-MZm"/>
-                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="4cV-bx-ugP"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="leading" secondItem="nAZ-h5-u5T" secondAttribute="leadingMargin" constant="33" id="55l-gv-BoY"/>
+                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="8iZ-W1-jtD"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="leading" secondItem="nAZ-h5-u5T" secondAttribute="leading" constant="203" id="AUc-Lj-EVw"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="Euh-v7-Jrc"/>
+                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="Fi2-kr-H6o"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="centerX" secondItem="nAZ-h5-u5T" secondAttribute="centerX" id="HWv-ej-mk2"/>
+                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="OPs-jy-2qk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="927-Xi-rqU" secondAttribute="trailing" constant="33" id="S0Y-8s-r4O"/>
+                            <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="h6s-Ff-d2R"/>
                             <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="xgr-mc-4kf"/>
                             <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="yxw-ZO-e16"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="2aa-lE-MZm"/>
                                 <exclude reference="AUc-Lj-EVw"/>
+                                <exclude reference="Euh-v7-Jrc"/>
+                                <exclude reference="Fi2-kr-H6o"/>
+                                <exclude reference="OPs-jy-2qk"/>
                             </mask>
                         </variation>
                     </view>
@@ -216,6 +225,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQ3-gz-2m2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9" y="925"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PW5-3n-t01">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tfu-YD-ZTx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OtX-i1-CMj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TNz-yx-Oys" kind="relationship" relationship="rootViewController" id="2m5-ZK-UKE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3l-UA-aLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-102"/>
         </scene>
     </scenes>
 </document>
