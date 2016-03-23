@@ -54,7 +54,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate
     let dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
         formatter.dateStyle = .MediumStyle
-        formatter.dateStyle = .NoStyle
         return formatter
     }()
     
@@ -74,6 +73,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate
         return true
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ChangeDate" {
+            let dateViewController = segue.destinationViewController as! DateViewController
+            dateViewController.item = item
+            //dateViewController.datePicker.date = item.dateCreated
+        }
+    }
     override func viewWillDisappear(animated: Bool)
     {
         super.viewWillDisappear(animated)

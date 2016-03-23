@@ -75,6 +75,48 @@
             </objects>
             <point key="canvasLocation" x="1046" y="-102"/>
         </scene>
+        <!--Date View Controller-->
+        <scene sceneID="tGC-Ut-b6G">
+            <objects>
+                <viewController id="9Mb-iv-6eW" customClass="DateViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FdG-RQ-JCP"/>
+                        <viewControllerLayoutGuide type="bottom" id="c2z-pv-jSx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zi7-7V-heD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoP-Xl-YO1">
+                                <rect key="frame" x="20" y="376" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="480369301.06325799">
+                                    <!--2016-03-22 19:55:01 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZoP-Xl-YO1" firstAttribute="centerX" secondItem="zi7-7V-heD" secondAttribute="centerX" id="1D7-9e-4oe"/>
+                            <constraint firstItem="c2z-pv-jSx" firstAttribute="top" secondItem="ZoP-Xl-YO1" secondAttribute="bottom" constant="8" id="Pc3-Q3-3ht"/>
+                            <constraint firstItem="ZoP-Xl-YO1" firstAttribute="trailing" secondItem="zi7-7V-heD" secondAttribute="trailingMargin" id="Pgg-Rm-3Fu"/>
+                            <constraint firstItem="c2z-pv-jSx" firstAttribute="top" secondItem="ZoP-Xl-YO1" secondAttribute="bottom" constant="8" id="aA9-gA-ZSs"/>
+                            <constraint firstItem="ZoP-Xl-YO1" firstAttribute="centerX" secondItem="zi7-7V-heD" secondAttribute="centerX" id="j9g-I5-7Zd"/>
+                            <constraint firstItem="ZoP-Xl-YO1" firstAttribute="leading" secondItem="zi7-7V-heD" secondAttribute="leadingMargin" constant="-40" id="mBv-mr-e2K"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mBv-mr-e2K"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="ZoP-Xl-YO1" id="59O-XR-krG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0x-yv-QuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="885"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="Eyp-kS-CWk">
             <objects>
@@ -87,8 +129,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="927-Xi-rqU">
-                                <rect key="frame" x="53" y="72" width="494" height="584"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="927-Xi-rqU">
+                                <rect key="frame" x="53" y="8" width="494" height="584"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEg-Yb-0Zl">
                                         <rect key="frame" x="0.0" y="0.0" width="494" height="30"/>
@@ -163,11 +205,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OB-vj-Wou">
-                                        <rect key="frame" x="0.0" y="114" width="494" height="470"/>
+                                        <rect key="frame" x="0.0" y="114" width="494" height="432"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-x8-oGg">
+                                        <rect key="frame" x="0.0" y="554" width="494" height="30"/>
+                                        <state key="normal" title="Change Date"/>
+                                        <connections>
+                                            <segue destination="9Mb-iv-6eW" kind="show" identifier="ChangeDate" id="6jO-OT-CrY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8n6-hS-DSD" firstAttribute="leading" secondItem="t4x-o2-H3P" secondAttribute="leading" id="SNk-LH-v50"/>
@@ -178,14 +227,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="0tH-Ic-qDx"/>
                             <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="1ad-MH-HA8"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="2aa-lE-MZm"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="leading" secondItem="nAZ-h5-u5T" secondAttribute="leadingMargin" constant="33" id="55l-gv-BoY"/>
+                            <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="6fB-82-xZu"/>
+                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="75e-Eo-PIu"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="8iZ-W1-jtD"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="leading" secondItem="nAZ-h5-u5T" secondAttribute="leading" constant="203" id="AUc-Lj-EVw"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="Euh-v7-Jrc"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="eO3-dA-hJk" secondAttribute="bottom" constant="8" id="Fi2-kr-H6o"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="centerX" secondItem="nAZ-h5-u5T" secondAttribute="centerX" id="HWv-ej-mk2"/>
+                            <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="JGv-2p-zzQ"/>
                             <constraint firstItem="927-Xi-rqU" firstAttribute="top" secondItem="nAZ-h5-u5T" secondAttribute="topMargin" constant="8" id="OPs-jy-2qk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="927-Xi-rqU" secondAttribute="trailing" constant="33" id="S0Y-8s-r4O"/>
                             <constraint firstItem="Tld-tu-PeB" firstAttribute="top" secondItem="927-Xi-rqU" secondAttribute="bottom" constant="8" id="h6s-Ff-d2R"/>
@@ -206,7 +259,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="5OB-vj-Wou" id="2rF-ia-0dC"/>
+                        <outlet property="dateLabel" destination="5OB-vj-Wou" id="8Q7-kn-U9H"/>
                         <outlet property="nameField" destination="Mzb-qY-kzY" id="xbP-Qw-eFZ"/>
                         <outlet property="serialNumberField" destination="Rmz-ub-Gwk" id="r0Q-uK-Tgq"/>
                         <outlet property="valueField" destination="ys2-KI-wnG" id="Op0-MV-3lF"/>
@@ -219,7 +272,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9" y="925"/>
+            <point key="canvasLocation" x="3" y="885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PW5-3n-t01">
