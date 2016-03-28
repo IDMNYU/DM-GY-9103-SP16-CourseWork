@@ -25,8 +25,9 @@ class BorderedUITextField : UITextField
         return res
     }
 }
-class DetailViewController: UIViewController, UITextFieldDelegate
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    @IBOutlet var imageView: UIImageView!
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -34,6 +35,22 @@ class DetailViewController: UIViewController, UITextFieldDelegate
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
+    
+    @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.Camera)
+        {
+            imagePicker.sourceType = .Camera
+        }
+        else
+        {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
+        
+    }
     
     var item: Item!
         {
@@ -96,5 +113,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate
         {
             item.valueInDollars = 0
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = image
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
