@@ -54,6 +54,13 @@ class ItemsViewController: UITableViewController{
         
     }
     
+    required init?(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)
+    
+        navigationItem.leftBarButtonItem = editButtonItem()
+        
+    }
+    
     override func tableView(tableView:UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         //if the table view is asking to commit a delete command ...
         if editingStyle == .Delete {
