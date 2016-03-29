@@ -35,24 +35,24 @@ class ItemsViewController: UITableViewController{
         }
         
     }
-    @IBAction func toggleEditingMode(sender: AnyObject){
-        
-        //if you are currently in editing mode..
-        if editing {
-            //change text of button to inform user of state
-            sender.setTitle("Edit", forState: .Normal)
-            
-            //turn off editing mode
-            setEditing(false, animated: true)
-            
-        }else {
-            //chnage text of button to inform user of state
-            sender.setTitle("Done", forState: .Normal)
-            //enter editing mode
-            setEditing(true, animated: true)
-        }
-        
-    }
+//    @IBAction func toggleEditingMode(sender: AnyObject){
+//        
+//        //if you are currently in editing mode..
+//        if editing {
+//            //change text of button to inform user of state
+//            sender.setTitle("Edit", forState: .Normal)
+//            
+//            //turn off editing mode
+//            setEditing(false, animated: true)
+//            
+//        }else {
+//            //chnage text of button to inform user of state
+//            sender.setTitle("Done", forState: .Normal)
+//            //enter editing mode
+//            setEditing(true, animated: true)
+//        }
+//        
+//    }
     
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
@@ -106,11 +106,12 @@ class ItemsViewController: UITableViewController{
         super.viewDidLoad()
         
         //get the height of the status bar
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left:0, bottom:0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+        //let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+//        let insets = UIEdgeInsets(top: statusBarHeight, left:0, bottom:0, right: 0)
+//        tableView.contentInset = insets
+//        tableView.scrollIndicatorInsets = insets
         
+
 //        tableView.rowHeight = 65
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
