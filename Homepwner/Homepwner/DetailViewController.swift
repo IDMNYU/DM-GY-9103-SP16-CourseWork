@@ -50,6 +50,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
+        let frame = imagePicker.view.frame
+        let crossHair = UILabel(frame: CGRect (x: (frame.width/2), y: (frame.height/2)-50, width: 50, height: 50))
+            crossHair.text = "+"
+            crossHair.font = crossHair.font.fontWithSize(35)
+            crossHair.textColor = UIColor.yellowColor()
+            imagePicker.cameraOverlayView = crossHair
         presentViewController(imagePicker, animated: true, completion: nil)
         
     }
