@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E08A74A1CA219F200FD675F /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E08A7491CA219F200FD675F /* Counter.swift */; };
 		6E493FC41CA20B7C00CDD6F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FC31CA20B7C00CDD6F5 /* AppDelegate.swift */; };
-		6E493FC61CA20B7C00CDD6F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FC51CA20B7C00CDD6F5 /* ViewController.swift */; };
+		6E493FC61CA20B7C00CDD6F5 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FC51CA20B7C00CDD6F5 /* CounterViewController.swift */; };
 		6E493FC91CA20B7C00CDD6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E493FC71CA20B7C00CDD6F5 /* Main.storyboard */; };
 		6E493FCB1CA20B7C00CDD6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E493FCA1CA20B7C00CDD6F5 /* Assets.xcassets */; };
 		6E493FCE1CA20B7C00CDD6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E493FCC1CA20B7C00CDD6F5 /* LaunchScreen.storyboard */; };
+		6E493FD61CA2178900CDD6F5 /* CounterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FD51CA2178900CDD6F5 /* CounterListViewController.swift */; };
+		6E493FD81CA2179200CDD6F5 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FD71CA2179200CDD6F5 /* CounterStore.swift */; };
+		6E493FDA1CA217A000CDD6F5 /* CounterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E493FD91CA217A000CDD6F5 /* CounterListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E08A7491CA219F200FD675F /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		6E493FC01CA20B7C00CDD6F5 /* CounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E493FC31CA20B7C00CDD6F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E493FC51CA20B7C00CDD6F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E493FC51CA20B7C00CDD6F5 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		6E493FC81CA20B7C00CDD6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E493FCA1CA20B7C00CDD6F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E493FCD1CA20B7C00CDD6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E493FCF1CA20B7C00CDD6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E493FD51CA2178900CDD6F5 /* CounterListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterListViewController.swift; sourceTree = "<group>"; };
+		6E493FD71CA2179200CDD6F5 /* CounterStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
+		6E493FD91CA217A000CDD6F5 /* CounterListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				6E493FC31CA20B7C00CDD6F5 /* AppDelegate.swift */,
-				6E493FC51CA20B7C00CDD6F5 /* ViewController.swift */,
+				6E493FC51CA20B7C00CDD6F5 /* CounterViewController.swift */,
 				6E493FC71CA20B7C00CDD6F5 /* Main.storyboard */,
 				6E493FCA1CA20B7C00CDD6F5 /* Assets.xcassets */,
 				6E493FCC1CA20B7C00CDD6F5 /* LaunchScreen.storyboard */,
+				6E493FD51CA2178900CDD6F5 /* CounterListViewController.swift */,
+				6E493FD71CA2179200CDD6F5 /* CounterStore.swift */,
+				6E493FD91CA217A000CDD6F5 /* CounterListCell.swift */,
+				6E08A7491CA219F200FD675F /* Counter.swift */,
 				6E493FCF1CA20B7C00CDD6F5 /* Info.plist */,
 			);
 			path = CounterApp;
@@ -96,6 +108,7 @@
 				TargetAttributes = {
 					6E493FBF1CA20B7C00CDD6F5 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 6WLKTW8RY2;
 					};
 				};
 			};
@@ -135,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E493FC61CA20B7C00CDD6F5 /* ViewController.swift in Sources */,
+				6E493FDA1CA217A000CDD6F5 /* CounterListCell.swift in Sources */,
+				6E493FC61CA20B7C00CDD6F5 /* CounterViewController.swift in Sources */,
+				6E08A74A1CA219F200FD675F /* Counter.swift in Sources */,
 				6E493FC41CA20B7C00CDD6F5 /* AppDelegate.swift in Sources */,
+				6E493FD81CA2179200CDD6F5 /* CounterStore.swift in Sources */,
+				6E493FD61CA2178900CDD6F5 /* CounterListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +266,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CounterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kevios9103.CounterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +280,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CounterApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kevios9103.CounterApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +309,7 @@
 				6E493FD41CA20B7C00CDD6F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

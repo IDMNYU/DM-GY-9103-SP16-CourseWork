@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let counterStore = CounterStore()
+        
+        let navController = window!.rootViewController as! UINavigationController
+        let counterController = navController.topViewController as! CounterListViewController
+        counterController.counterStore = counterStore
+        
+        
         // Override point for customization after application launch.
         return true
     }

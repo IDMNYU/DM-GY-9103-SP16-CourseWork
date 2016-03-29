@@ -8,18 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CounterViewController: UIViewController {
+    
 
+    
+    @IBOutlet var counterLabel: UILabel!
+    var countValue: Int!
     override func viewDidLoad() {
+        
+        countValue = 0
         super.viewDidLoad()
+        
+       counterLabel.text = String(countValue)
+        print(countValue)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func increaseCount(sender: AnyObject) {
+        
+        countValue = countValue + 1
+        counterLabel.text = String(countValue)
+        print(countValue)
+        //counterLabel.text = String(count)
     }
-
+    
+   @IBAction func decreaseCounter(sender: AnyObject) {
+        
+        countValue = countValue - 1
+        if(countValue >= 0)
+        {
+            print(countValue)
+            counterLabel.text = String(countValue)
+        }
+        else
+        {
+            countValue = 0
+            print(countValue)
+            counterLabel.text = String(countValue)
+        }
+    }
+    
 
 }
 

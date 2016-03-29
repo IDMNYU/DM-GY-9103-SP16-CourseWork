@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CounterApp/CounterViewController.swift"
+            timestampString = "480384516.258556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CounterApp/CounterViewController.swift"
+            timestampString = "480384516.258556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CounterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CounterApp.CounterViewController.count.getter : Swift.Int"
+                  moduleName = "CounterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keval/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/CounterApp/CounterApp/CounterViewController.swift"
+                  timestampString = "480383006.073102"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CounterApp.CounterViewController.count.setter : Swift.Int"
+                  moduleName = "CounterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keval/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/CounterApp/CounterApp/CounterViewController.swift"
+                  timestampString = "480383006.075698"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CounterApp.CounterViewController.count.materializeForSet : Swift.Int"
+                  moduleName = "CounterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keval/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/CounterApp/CounterApp/CounterViewController.swift"
+                  timestampString = "480383006.075948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CounterApp.CounterViewController.init (CounterApp.CounterViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; CounterApp.CounterViewController"
+                  moduleName = "CounterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keval/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/CounterApp/CounterApp/CounterViewController.swift"
+                  timestampString = "480383006.076054"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CounterApp.CounterViewController.init (CounterApp.CounterViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CounterApp.CounterViewController&gt;"
+                  moduleName = "CounterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Keval/Desktop/iOS_Programming/DM-GY-9103-SP16-CourseWork/CounterApp/CounterApp/CounterViewController.swift"
+                  timestampString = "480383006.076143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
