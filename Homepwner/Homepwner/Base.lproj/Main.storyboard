@@ -210,14 +210,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-x8-oGg">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-x8-oGg">
                                         <rect key="frame" x="0.0" y="143" width="560" height="30"/>
                                         <state key="normal" title="Change Date"/>
                                         <connections>
                                             <segue destination="9Mb-iv-6eW" kind="show" identifier="ChangeDate" id="6jO-OT-CrY"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="2Ll-Wd-G68">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ll-Wd-G68">
                                         <rect key="frame" x="0.0" y="181" width="560" height="296"/>
                                     </imageView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73a-mr-zBm">
@@ -229,6 +229,11 @@
                                             <barButtonItem systemItem="camera" id="QTl-jM-v7J">
                                                 <connections>
                                                     <action selector="takePicture:" destination="FFa-1z-7fC" id="MMD-zC-ouf"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Trash" width="77" id="Mk5-eP-quF">
+                                                <connections>
+                                                    <action selector="deletePicture:" destination="FFa-1z-7fC" id="UOp-of-Ucq"/>
                                                 </connections>
                                             </barButtonItem>
                                         </items>

@@ -48,8 +48,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
         
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
         presentViewController(imagePicker, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func deletePicture(sender: UIBarButtonItem) {
+        imageStore.deleteImageForKey(item.itemKey)
+        imageView.image = nil
     }
     
     var item: Item!
