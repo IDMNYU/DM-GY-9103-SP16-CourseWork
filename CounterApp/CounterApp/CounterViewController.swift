@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CounterViewController: UITableViewController {
+class CounterViewController: UIViewController {
 
     var counter: Counter!
     
