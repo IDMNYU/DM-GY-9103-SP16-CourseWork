@@ -64,7 +64,13 @@
                             <outlet property="delegate" destination="Hl0-1e-d6K" id="Ggr-Sv-Wo3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MHm-cZ-zoE"/>
+                    <navigationItem key="navigationItem" id="MHm-cZ-zoE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="g06-r1-TDL">
+                            <connections>
+                                <action selector="addNewCounter:" destination="Hl0-1e-d6K" id="WPr-SM-mn1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UT-UQ-isF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
