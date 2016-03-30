@@ -43,13 +43,13 @@ class CounterStore
         allCounters.insert(movedItem, atIndex: toIndex)
     }
     
-    /* init()
+    init()
     {
-    for _ in 0..<10
-    {
-    createItem()
+        for _ in 0..<5
+        {
+            createCounter()
+        }
     }
-    } */
     
 }
 

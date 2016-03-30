@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CounterViewController: UIViewController {
-    
+class CounterViewController: UITableViewController {
 
+    var counter: Counter!
     
     @IBOutlet var counterLabel: UILabel!
     var countValue: Int!
     override func viewDidLoad() {
         
-        countValue = 0
+        countValue = counter.countValue
         super.viewDidLoad()
         
        counterLabel.text = String(countValue)
@@ -47,6 +47,27 @@ class CounterViewController: UIViewController {
             countValue = 0
             print(countValue)
             counterLabel.text = String(countValue)
+        }
+    }
+    
+    let numberFormatter: NSNumberFormatter = {
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .DecimalStyle
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 0
+        return formatter
+    }()
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if let contVal = counterLabel.text, value = numberFormatter.numberFromString(contVal)
+        {
+            counter.countValue = value.integerValue
+        }
+        else
+        {
+            counter.countValue = 0
         }
     }
     
