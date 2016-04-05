@@ -8,12 +8,29 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
-    
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
     @IBOutlet var nameField: UITextField!
     @IBOutlet var serialField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    
+    
+    @IBAction func takePicture(sender: UIBarButtonItem) {
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.Camera){
+            imagePicker.sourceType = .Camera
+        }else {
+            
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        
+        imagePicker.delegate = self
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
+    
+    }
     
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
     view.endEditing(true)
