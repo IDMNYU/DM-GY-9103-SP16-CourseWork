@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="To1-kT-4hN">
+                                <rect key="frame" x="40" y="40" width="520" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="pWj-Gy-p78"/>
+                                    <constraint firstAttribute="height" constant="30" id="y7s-pV-wLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="labelChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Bkn-cQ-sz8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eyR-qc-D4j"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Color Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrw-bD-WGd">
+                                <rect key="frame" x="240" y="85" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-rw-X84">
+                                <rect key="frame" x="266" y="129" width="69" height="30"/>
+                                <state key="normal" title="Add Color"/>
+                                <connections>
+                                    <action selector="addNewName:" destination="BYZ-38-t0r" eventType="touchDown" id="tki-Wj-KZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="6Ht-ff-jbd"/>
+                            <constraint firstItem="mrw-bD-WGd" firstAttribute="top" secondItem="To1-kT-4hN" secondAttribute="bottom" constant="15" id="BlY-EI-aJg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="To1-kT-4hN" secondAttribute="trailing" constant="20" id="CTD-k2-F4j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="To1-kT-4hN" secondAttribute="trailing" constant="20" id="Cfw-vw-BOV"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="EAx-SU-TEo"/>
+                            <constraint firstItem="mrw-bD-WGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EOv-K5-x5k"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="F3o-Mq-jkt"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fex-2J-kCV"/>
+                            <constraint firstItem="c8q-rw-X84" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G2T-oo-spo"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="T4C-aS-abW"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bEi-oZ-8Ku"/>
+                            <constraint firstItem="To1-kT-4hN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="iUQ-Ol-YBm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="To1-kT-4hN" secondAttribute="trailing" constant="20" id="kFv-d7-5c1"/>
+                            <constraint firstItem="mrw-bD-WGd" firstAttribute="top" secondItem="To1-kT-4hN" secondAttribute="bottom" constant="15" id="odb-ds-uQv"/>
+                            <constraint firstItem="mrw-bD-WGd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yef-pa-2Qh"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Gju-j7-dgW" appends="YES" id="8Ar-QQ-tqv"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addName" destination="c8q-rw-X84" id="BzT-Bm-lZM"/>
+                        <outlet property="colorLabel" destination="mrw-bD-WGd" id="7cj-Ib-tFc"/>
+                        <outlet property="nameField" destination="To1-kT-4hN" id="ogf-Fc-WgO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Gju-j7-dgW">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="Ita-mI-e6S"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="391" y="219"/>
+        </scene>
+    </scenes>
+</document>
