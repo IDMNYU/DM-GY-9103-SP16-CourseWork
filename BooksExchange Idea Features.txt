@@ -1,0 +1,12 @@
+BooksExchange Idea Features
+
+- books information, cover, description
+- books review
+- account, books for exchange, books reading, books read history,
+- books exchange, local, talk with him
+- searching for books,
+- add book for exchange
+- books exchange groups
+- categories willing to exchange for
+- goodreads api
+
